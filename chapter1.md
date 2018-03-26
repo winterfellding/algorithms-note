@@ -16,3 +16,16 @@
     Arrays.sort(a);
     System.out.println(Arrays.toString(a)); // { 1, 2, 3 } sorted
 
+### 数据结构的例子
+1. bag 就是一个包，不支持取出
+2. queue 队列，排队，先进的先出
+3. stack email后进入的在上面，好处是新的email会被先读到，坏处是老的不清空stack永远读不到 / 上网看网页，点了link就到了新网页上了(not _blank)，老网页必须点退回往回退
+
+### 数据结构的应用
+1. 算术运算的运用
+    1. ( 无视
+    2. 运算符 push进operator stack
+    3. 数字 push进val stack
+    4. ) pop 两个数字， 一个operator，进行运算后得到的结果push回val stack
+    5. 最终合法的expression会留下一个val在val stack中，将其pop出来就得到了结果
+
