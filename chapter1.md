@@ -29,3 +29,14 @@
     4. ) pop 两个数字， 一个operator，进行运算后得到的结果push回val stack
     5. 最终合法的expression会留下一个val在val stack中，将其pop出来就得到了结果
 
+### Quick find
+1. union时遍历整个id数组，把连接的两个点的id[x]值更新成一样的
+2. connected的时候比较id[p] == id[q]，得出结果
+3. 缺点: union需要遍历，O(N) 优点: connected是O(1)
+
+### Quick union
+1. union时候找到各自点的root，把小的树root值指向大树的值
+2. connected时候比较节点各自的root是否相同
+3. 可以通过向上遍历节点时，将孙子节点指向儿子节点的指向，可以变相拍平树，使得connected操作时减少root的耗时
+4. union find的应用： 使用union find每次增加漏空节点，for循环测试渗透时候镂空节点占总结点的比例，开什么时候就是大概率的渗透了
+
